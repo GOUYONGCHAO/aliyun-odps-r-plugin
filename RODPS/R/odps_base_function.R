@@ -818,7 +818,7 @@ rodps.table.rows <- function(full.tablename, partition=NULL)
         ret <- as.numeric( v[[1]] )
     }
     else{
-        sql <- sprintf( 'select count(*) from %s', full.tablename )
+        sql <- sprintf( 'select count(1) from %s', full.tablename )
         v <- rodps.sql( sql )
         ret <- as.numeric(v[1 , 1])
     }
